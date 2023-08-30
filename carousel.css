@@ -27,7 +27,9 @@ body {
 
 .carousel-container {
     display: flex;
-    overflow: hidden;
+    //overflow: hidden;
+    overflow-x: scroll;
+    width:500px;
 }
 
 .carousel-slide {

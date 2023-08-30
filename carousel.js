@@ -56,3 +56,19 @@ function showSlide(index) {
 
     document.getElementById('display').innerHTML = "<img src="+imgurl+" style='width:100%;height:100%;object-fit: contain;'>";
 }
+
+
+
+function displayimg(clickedImage) {
+      // 'clickedImage' parameter holds the reference to the clicked image element
+      // You can now access its attributes, such as 'src' and 'alt'
+      var imageUrl = clickedImage.src;
+      //var altText = clickedImage.alt;
+
+      // Now you can use 'imageUrl' and 'altText' as needed, for example:
+      //console.log("Clicked image source:", imageUrl);
+      //console.log("Clicked image alt:", altText);
+      
+      // You can perform additional actions here, like updating a larger image display or any other behavior.
+      document.getElementById('display').innerHTML = "<img src="+ imageUrl +" style='width:100%;height:100%;object-fit: contain;'>";
+}
