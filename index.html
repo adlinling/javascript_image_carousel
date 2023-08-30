@@ -10,28 +10,35 @@
 </head>
 <body>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Display Example</title>
+</head>
+<body>
+  <div class="displaycontainer">
+    <button id="prevBtndisp">&lt;</button>  
+    <div id="display"><img src="image1.png" style='width:100%;height:100%;object-fit: contain;'></div>
+    <button id="nextBtndisp">&gt;</button>
+  </div>
 
-	<div class="displaycontainer">
-	<button id="prevBtndisp">&lt;</button>  
-    	<div id="display"><img src="image1.png" style='width:100%;height:100%;object-fit: contain;'></div>
-        <button id="nextBtndisp">&gt;</button>
-	</div>
-
-
-    <div class="carousel">
-        <button id="prevBtn">&lt;</button>
-        <div class="carousel-container">
-            <img class="carousel-slide" src="image1.png" alt="Product Image 1" onclick="displayimg(this);">
-            <img class="carousel-slide" src="image2.png" alt="Product Image 2" onclick="displayimg(this);">
-            <img class="carousel-slide" src="image3.png" alt="Product Image 3" onclick="displayimg(this);">
-            <img class="carousel-slide" src="image4.png" alt="Product Image 4" onclick="displayimg(this);">
-            <!-- Add more images as needed -->
-        </div>
-        <button id="nextBtn">&gt;</button>
+  <div class="carousel">
+    <button id="prevBtn">&lt;</button>
+    <div class="carousel-container">
+      <img class="carousel-slide" src="image1.png" alt="Product Image 1" onclick="displayimg(this, 0);">
+      <img class="carousel-slide" src="image2.png" alt="Product Image 2" onclick="displayimg(this, 1);">
+      <img class="carousel-slide" src="image3.png" alt="Product Image 3" onclick="displayimg(this, 2);">
+      <img class="carousel-slide" src="image4.png" alt="Product Image 4" onclick="displayimg(this, 3);">
+      <!-- Add more images as needed -->
     </div>
+    <button id="nextBtn">&gt;</button>
+  </div>
 
-    <!--This script tag must be placed below the carousel divs-->
-    <script src="carousel.js"></script>
+ <!--This script tag must be placed below the carousel divs--> 
+  <script src="carousel.js"></script>
+</body>
+</html>
+
 
 
  </body>
