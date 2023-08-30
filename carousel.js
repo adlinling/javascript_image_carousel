@@ -6,17 +6,11 @@
 
     let currentSlide = 0;
 
-    prevBtn.addEventListener('click', () => {
-      showSlide(currentSlide - 1);
-    });
 
     prevBtndisp.addEventListener('click', () => {
       showSlide(currentSlide - 1);
     });
 
-    nextBtn.addEventListener('click', () => {
-      showSlide(currentSlide + 1);
-    });
 
     nextBtndisp.addEventListener('click', () => {
       showSlide(currentSlide + 1);
@@ -39,4 +33,31 @@
       const images = document.getElementsByClassName("carousel-slide");
       const imgurl = images[index].src;
       document.getElementById('display').innerHTML = "<img src=" + imgurl + " style='width:100%;height:100%;object-fit: contain;'>";
+    }
+
+
+
+
+
+    const leftBtn = document.getElementById('leftBtn');
+    const rightBtn = document.getElementById('rightBtn');
+    const carouselContainer = document.querySelector('.carousel-container');
+    const carouselSlides = document.querySelectorAll('.carousel-slide');
+
+    let scrollAmount = 200; // Adjust the scroll amount as needed
+
+    leftBtn.addEventListener('click', () => {
+      scrollCarousel('left');
+    });
+
+    rightBtn.addEventListener('click', () => {
+      scrollCarousel('right');
+    });
+
+    function scrollCarousel(direction) {
+      if (direction === 'left') {
+        carouselContainer.scrollLeft -= scrollAmount;
+      } else if (direction === 'right') {
+        carouselContainer.scrollLeft += scrollAmount;
+      }
     }
